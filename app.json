@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "lunchting",
+    "description": "런치팅, 삭막한 직장생활 속 설렘 한 스푼",
+    "slug": "lunchting",
+    "privacy": "public",
+    "sdkVersion": "19.0.0",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "primaryColor": "#fc5a5a",
+    "icon": "./assets/icons/app-icon.png",
+    "notification": {
+      "icon": "./assets/icons/notification-icon.png",
+    },
+    "loading": {
+      "icon": "./assets/icons/loading-icon.png",
+      "hideExponentText": true
+    },
+    "androidStatusBarColor": "#000000",
+    "packagerOpts": {
+      "assetExts": ["ttf", "mp4"]
+    },
+    "ios": {
+      "bundleIdentifier": "com.heeham.lunchting",
+      "buildNumber": "1",
+      "supportsTablet": false
+    },
+    "android": {
+      "package": "com.heeham.lunchting",
+      "versionCode": 1,
+      "icon": "./assets/icons/lunchting_android.png",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAABPl4NIo8EwfgqPfzDwVy1SImYFqfjqU"
+        },
+      },
+    }
+  }
+}
