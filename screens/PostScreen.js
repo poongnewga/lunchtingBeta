@@ -16,7 +16,7 @@ class PostScreen extends Component {
 
     return {
       title: '게시글',
-      header: <View style={{width: '100%', height:24, backgroundColor: '#ffffff'}}></View>,
+      header: Platform.OS == 'android' ? (<View style={{width: '100%', height:0, backgroundColor: '#ffffff'}}></View>) : (<View style={{width: '100%', height:24, backgroundColor: '#ffffff'}}></View>),
       headerRight: (
        <View></View>
       ),
