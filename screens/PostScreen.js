@@ -43,7 +43,7 @@ class PostScreen extends Component {
       formdata.append("token", this.props.user);
       formdata.append("id", this.props.navigation.state.params.id);
 
-      fetch('https://lunchlunch-whehdrms.c9users.io/app/get_post', {
+      fetch('http://www.lunchting.com/app/get_post', {
         method: 'post',
         headers: {
           'Accept': 'application/json',
@@ -95,7 +95,7 @@ class PostScreen extends Component {
       formdata.append("token", this.props.user);
       formdata.append("id", this.props.navigation.state.params.id);
 
-      fetch('https://lunchlunch-whehdrms.c9users.io/app/get_post', {
+      fetch('http://www.lunchting.com/app/get_post', {
         method: 'post',
         headers: {
           'Accept': 'application/json',
@@ -147,7 +147,7 @@ class PostScreen extends Component {
     formdata.append("token", this.props.user);
     formdata.append("id", this.state.post.id);
 
-    fetch('https://lunchlunch-whehdrms.c9users.io/app/like_toggle', {
+    fetch('http://www.lunchting.com/app/like_toggle', {
       method: 'post',
       headers: {
         'Accept': 'application/json',
@@ -192,7 +192,7 @@ class PostScreen extends Component {
     formdata.append("id", this.state.post.id);
     formdata.append("content", this.state.commentText);
 
-    fetch('https://lunchlunch-whehdrms.c9users.io/app/write_comment', {
+    fetch('http://www.lunchting.com/app/write_comment', {
       method: 'post',
       headers: {
         'Accept': 'application/json',
@@ -236,7 +236,7 @@ class PostScreen extends Component {
       formdata.append("id", this.state.post.id);
       formdata.append("comment_id", id);
 
-      fetch('https://lunchlunch-whehdrms.c9users.io/app/delete_comment', {
+      fetch('http://www.lunchting.com/app/delete_comment', {
         method: 'post',
         headers: {
           'Accept': 'application/json',
@@ -279,7 +279,7 @@ class PostScreen extends Component {
       formdata.append("token", this.props.user);
       formdata.append("id", id);
 
-      fetch('https://lunchlunch-whehdrms.c9users.io/app/delete_post', {
+      fetch('http://www.lunchting.com/app/delete_post', {
         method: 'post',
         headers: {
           'Accept': 'application/json',

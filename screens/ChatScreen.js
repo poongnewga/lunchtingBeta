@@ -15,7 +15,7 @@ class ChatScreen extends Component {
 
   static navigationOptions = {
     title: '',
-    header: <View style={{width: '100%', height:24, backgroundColor: '#ffffff'}}></View>,
+    header: Platform.OS == 'android' ? (<View style={{width: '100%', height:0, backgroundColor: '#ffffff'}}></View>) : (<View style={{width: '100%', height:24, backgroundColor: '#ffffff'}}></View>),
     headerLeft: (<View></View>),
     headerRight:(<View></View>),
 
@@ -82,9 +82,12 @@ class ChatScreen extends Component {
   renderNullChatRoom = () => {
     if(this.props.chatDays["mon"] == null && this.props.chatDays["tue"] == null && this.props.chatDays["wed"] == null && this.props.chatDays["thu"] == null && this.props.chatDays["fri"] == null) {
       return (
-        <View style={{width: WIDTH, flex: 1, alignItems: 'center'}}>
-          <Text style={{fontSize: 20, marginBottom: 20}}>성사된 매칭이 없습니다.</Text>
-          <Text style={{fontSize: 20, marginBottom: 20}}>언젠간 설레는 만남이 있을 거에요!</Text>
+        <View style={{width: WIDTH, flex: 1, alignItems: 'center', backgroundColor: '#fafafa'}}>
+          <View style={{width : '90%', height: 200, padding: 10, backgroundColor: 'white', borderRadius: 10, borderWidth: 1 , borderColor: '#d2d2d2', justifyContent: 'center', alignItems: 'center'}}>
+            <Text style={{fontSize: 14, marginBottom: 15}}>성사된 매칭이 없습니다.</Text>
+            <Text style={{fontSize: 14, marginBottom: 10}}>언젠간 설레는 만남이 있을 거에요!</Text>
+
+          </View>
 
         </View>
       )

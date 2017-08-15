@@ -14,7 +14,7 @@ class ArticleScreen extends Component {
 
     return {
       title: '게시글',
-      header: <View style={{width: '100%', height:24, backgroundColor: '#ffffff'}}></View>,
+      header: Platform.OS == 'android' ? (<View style={{width: '100%', height:0, backgroundColor: '#ffffff'}}></View>) : (<View style={{width: '100%', height:24, backgroundColor: '#ffffff'}}></View>),
       headerRight: (
        <View></View>
       ),
@@ -49,78 +49,17 @@ class ArticleScreen extends Component {
 
           </View>
         </View>
-        <View style={{flex: 1, width: DEVICE_WIDTH}}>
+        <View style={{flex: 1, width: DEVICE_WIDTH, height: DEVICE_WIDTH * 3, justifyContent: 'flex-start'}}>
            <ScrollView>
-             <View style={{width: DEVICE_WIDTH}}>
-               <Text>dd</Text>
-               <Image style={{width: '100%',height: 500, resizeMode: 'contain'}} source={{uri : "http://lunchlunch-whehdrms.c9users.io/images/ks_card1.png"}}/>
-               <Text>dds</Text>
+             <View style={{width: DEVICE_WIDTH, height: DEVICE_WIDTH * 3, justifyContent: 'flex-start'}}>
+               <Image style={{width: DEVICE_WIDTH,height: DEVICE_WIDTH * 3, resizeMode: 'cover'}} source={{uri : this.props.navigation.state.params.uri}}/>
                {/* <Image style={{width: '100%', resizeMode: 'contain'}} source={{uri : "http://lunchlunch-whehdrms.c9users.io/images/ks_card2.png"}}/> */}
+
              </View>
            </ScrollView>
         </View>
 
-        {/* <ScrollView contentContainerStyle={{width: DEVICE_WIDTH, flex: 1, alignItems: 'center'}}>
-          <View style={{width: '100%', paddingTop: 20, minHeight: 70, borderBottomWidth: 1, borderColor: '#bdbdbd', alignItems: 'center'}}>
-            <View style={{width: '90%', flexDirection: 'row', paddingBottom: 15}}>
-              <Text>
-                <Text style={{fontSize: 16, color: '#4a4a4a'}}>{this.state.post.title}</Text>
-                {this.state.post.hits >= 100 ? (
-                  <Text style={{color: '#ff5955', fontSize: 12}}>  HOT</Text>
-                ) : (
-                  <Text style={{color: '#ff5955', fontSize: 12}}></Text>
-                )}
-              </Text>
-            </View>
-            <View style={{width: '90%', flexDirection: 'row', paddingBottom: 7}}>
-              <View style={{maxWidth: '50%', height: 14, flexDirection: 'row'}}>
-                <View style={{justifyContent: 'center', height: '100%'}}>
-                  {this.state.post.gender == "m" ? (
-                    <Text style={{fontSize: 5, color: '#00a5b1'}}>● </Text>
-                  ) : (
-                    <Text style={{fontSize: 5, color: '#ff5955'}}>● </Text>
-                  )}
-                </View>
-                <View style={{height: '100%', justifyContent: 'center'}}>
-                  <Text style={{color: '#a0a0a0', fontSize: 12}}> {this.state.post.nickname}  </Text>
-                </View>
-              </View>
-              <View style={{height: 14, justifyContent: 'center', flex: 1}}>
-                <Text style={{color: '#a0a0a0', fontSize: 12, textAlign: 'right'}}>
-                  {this.state.post.created_at}  조회수 {this.state.post.hits}
-                </Text>
-              </View>
 
-            </View>
-          </View>
-          <View style={{width: '100%', minHeight: 70, borderBottomWidth: 1, borderColor: '#bdbdbd', alignItems: 'center'}}>
-            <View style={{width: '90%', paddingTop: 25, paddingBottom: 10}}>
-              <Text>{this.state.post.content}</Text>
-            </View>
-            <View style={{width: '90%', paddingBottom: 15}}>
-
-              <View style={{height: 30, width: '100%', justifyContent: 'flex-end', flexDirection: 'row', alignItems: 'center'}}>
-                <TouchableOpacity onPress={this.likePostToggle} style={{flexDirection:'row'}}>
-                  <View style={{width: 20, height: 20, justifyContent: 'center', alignItems: 'center'}}>
-                    <Image style={{width: 16, height: 16, resizeMode: 'contain'}} source={LikeButton} />
-                  </View>
-                  <View style={{height: 20, justifyContent: 'center', alignItems: 'center'}}>
-                    <Text style={{fontSize: 14, color: '#fc5a5a'}}>{this.state.post.likeCount} </Text>
-                  </View>
-                </TouchableOpacity>
-
-                <View style={{width: 20, height: 20, justifyContent: 'center', alignItems: 'center'}}>
-                  <Image style={{width: 16, height: 16, resizeMode: 'contain'}} source={CommentButton} />
-                </View>
-                <View style={{height: 20, justifyContent: 'center', alignItems: 'center'}}>
-                  <Text style={{fontSize: 14, color: '#00a5b1'}}>{this.state.post.commentCount} </Text>
-                </View>
-              </View>
-
-            </View>
-          </View>
-
-        </ScrollView> */}
       </View>
     )
   }

@@ -16,7 +16,7 @@ class CommunityScreen extends Component {
     headerLeft: (<View></View>),
     headerRight:(<View></View>),
 
-    header: <View style={{width: '100%', height:24, backgroundColor: '#ffffff'}}></View>,
+    header: Platform.OS == 'android' ? (<View style={{width: '100%', height:0, backgroundColor: '#ffffff'}}></View>) : (<View style={{width: '100%', height:24, backgroundColor: '#ffffff'}}></View>),
 
     tabBarLabel: '커뮤니티',
     tabBarIcon: ({ tintColor, focused }) => (
@@ -221,7 +221,7 @@ class CommunityScreen extends Component {
       formdata.append("token", this.props.user);
       formdata.append("query", this.state.searchText);
       formdata.append("page", this.state.searchPage);
-      fetch('https://lunchlunch-whehdrms.c9users.io/app/get_search_page', {
+      fetch('http://www.lunchting.com/app/get_search_page', {
         method: 'post',
         headers: {
           'Accept': 'application/json',
@@ -266,7 +266,7 @@ class CommunityScreen extends Component {
     formdata.append("query", this.state.searchText);
 
     // 주소 변경 필요
-    fetch('https://lunchlunch-whehdrms.c9users.io/app/refresh_search_posts', {
+    fetch('http://www.lunchting.com/app/refresh_search_posts', {
       method: 'post',
       headers: {
         'Accept': 'application/json',
@@ -307,7 +307,7 @@ class CommunityScreen extends Component {
       let formdata = new FormData();
       formdata.append("token", this.props.user);
       formdata.append("page", this.state.page);
-      fetch('https://lunchlunch-whehdrms.c9users.io/app/get_page', {
+      fetch('http://www.lunchting.com/app/get_page', {
         method: 'post',
         headers: {
           'Accept': 'application/json',
@@ -352,7 +352,7 @@ class CommunityScreen extends Component {
     formdata.append("token", this.props.user);
 
     // 주소 변경 필요
-    fetch('https://lunchlunch-whehdrms.c9users.io/app/refresh_posts', {
+    fetch('http://www.lunchting.com/app/refresh_posts', {
       method: 'post',
       headers: {
         'Accept': 'application/json',

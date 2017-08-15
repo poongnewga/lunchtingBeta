@@ -12,7 +12,7 @@ class SelectPeopleScreen extends Component {
   static navigationOptions = ({navigation}) => {
     return {
       title: '인원 선택',
-      header: <View style={{width: '100%', height:24, backgroundColor: '#ffffff'}}></View>,
+      header: Platform.OS == 'android' ? (<View style={{width: '100%', height:0, backgroundColor: '#ffffff'}}></View>) : (<View style={{width: '100%', height:24, backgroundColor: '#ffffff'}}></View>),
       tabBarLabel: '런치팅',
       headerLeft: (<View></View>),
       headerRight: (

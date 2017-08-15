@@ -17,7 +17,7 @@ class NewPostScreen extends Component {
 
     return {
       title: '새 글 작성하기',
-      header: <View style={{width: '100%', height:24, backgroundColor: '#ffffff'}}></View>,
+      header: Platform.OS == 'android' ? (<View style={{width: '100%', height:0, backgroundColor: '#ffffff'}}></View>) : (<View style={{width: '100%', height:24, backgroundColor: '#ffffff'}}></View>),
       headerRight: (
        <View></View>
       ),
@@ -40,7 +40,7 @@ class NewPostScreen extends Component {
     formdata.append("title", this.state.titleText);
     formdata.append("content", this.state.content);
 
-    fetch('https://lunchlunch-whehdrms.c9users.io/app/write_new_post', {
+    fetch('http://www.lunchting.com/app/write_new_post', {
       method: 'post',
       headers: {
         'Accept': 'application/json',

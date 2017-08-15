@@ -64,7 +64,7 @@ export default class App extends React.Component {
         // 안드로이드에 추가 마진 + 헤더 배경 조절 가능
         headerStyle: {
 
-          marginTop: Platform.OS === 'android' ? 24 : 0,
+          marginTop: Platform.OS === 'android' ? 0 : 0,
           // backgroundColor: '#f4f4f4'
           // 헤더 흰색 + 줄(그림자) 삭제
           backgroundColor: 'white',

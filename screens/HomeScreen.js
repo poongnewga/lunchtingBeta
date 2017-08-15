@@ -13,9 +13,16 @@ import { Video } from 'expo';
 
 class HomeScreen extends Component {
   static navigationOptions = ({navigation}) => {
+
+
+
     return {
       title: '홈',
-      header: <View style={{width: '100%', height:24, backgroundColor: '#ffffff'}}></View>,
+
+
+
+
+      header: Platform.OS == 'android' ? (<View style={{width: '100%', height:0, backgroundColor: '#ffffff'}}></View>) : (<View style={{width: '100%', height:24, backgroundColor: '#ffffff'}}></View>),
       tabBarLabel: '홈',
       headerLeft: (<View></View>),
       headerRight: (
@@ -119,7 +126,7 @@ class HomeScreen extends Component {
   };
 
   state = {
-    selctedPage: 1
+    selctedPage: 3
   }
 
   renderPage1 = () => {
@@ -129,7 +136,7 @@ class HomeScreen extends Component {
           <View style={{width: '100%', height: 200, flexDirection: 'row', backgroundColor: "#ebebeb", marginBottom: 10}}>
             <View style={{flex: 1, paddingLeft: 10, paddingRight: 5}}>
               <TouchableOpacity
-                //  onPress={()=>{this.props.navigation.navigate('article');}} 
+                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_conversation4.png"}}/>
@@ -141,7 +148,9 @@ class HomeScreen extends Component {
             </View>
 
             <View style={{flex: 1, paddingLeft: 5, paddingRight: 10}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_conversation1.png"}}/>
                 </View>
@@ -154,7 +163,9 @@ class HomeScreen extends Component {
 
           <View style={{width: '100%', height: 200, flexDirection: 'row', backgroundColor: "#ebebeb", marginBottom: 10}}>
             <View style={{flex: 1, paddingLeft: 10, paddingRight: 5}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_conversation2.png"}}/>
                 </View>
@@ -165,7 +176,9 @@ class HomeScreen extends Component {
             </View>
 
             <View style={{flex: 1, paddingLeft: 5, paddingRight: 10}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_conversation3.png"}}/>
                 </View>
@@ -179,7 +192,9 @@ class HomeScreen extends Component {
 
           <View style={{width: '100%', height: 200, flexDirection: 'row', backgroundColor: "#ebebeb", marginBottom: 10}}>
             <View style={{flex: 1, paddingLeft: 10, paddingRight: 5}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_conversation5.png"}}/>
                 </View>
@@ -190,7 +205,9 @@ class HomeScreen extends Component {
             </View>
 
             <View style={{flex: 1, paddingLeft: 5, paddingRight: 10}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_conversation6.png"}}/>
                 </View>
@@ -211,7 +228,9 @@ class HomeScreen extends Component {
         <View>
           <View style={{width: '100%', height: 200, flexDirection: 'row', backgroundColor: "#ebebeb", marginBottom: 10}}>
             <View style={{flex: 1, paddingLeft: 10, paddingRight: 5}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_success3.png"}}/>
                 </View>
@@ -222,7 +241,9 @@ class HomeScreen extends Component {
             </View>
 
             <View style={{flex: 1, paddingLeft: 5, paddingRight: 10}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_success5.png"}}/>
                 </View>
@@ -235,7 +256,9 @@ class HomeScreen extends Component {
 
           <View style={{width: '100%', height: 200, flexDirection: 'row', backgroundColor: "#ebebeb", marginBottom: 10}}>
             <View style={{flex: 1, paddingLeft: 10, paddingRight: 5}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_success2.png"}}/>
                 </View>
@@ -246,7 +269,9 @@ class HomeScreen extends Component {
             </View>
 
             <View style={{flex: 1, paddingLeft: 5, paddingRight: 10}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_success4.png"}}/>
                 </View>
@@ -260,7 +285,9 @@ class HomeScreen extends Component {
 
           <View style={{width: '100%', height: 200, flexDirection: 'row', backgroundColor: "#ebebeb", marginBottom: 10}}>
             <View style={{flex: 1, paddingLeft: 10, paddingRight: 5}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_success1.png"}}/>
                 </View>
@@ -271,7 +298,9 @@ class HomeScreen extends Component {
             </View>
 
             <View style={{flex: 1, paddingLeft: 5, paddingRight: 10}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_success6.png"}}/>
                 </View>
@@ -292,18 +321,22 @@ class HomeScreen extends Component {
         <View>
           <View style={{width: '100%', height: 200, flexDirection: 'row', backgroundColor: "#ebebeb", marginBottom: 10}}>
             <View style={{flex: 1, paddingLeft: 10, paddingRight: 5}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/yr_card_avoid_talk.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_location5.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
-                  <Text>피해야 할 식당 Top 3!</Text>
+                  <Text>피해야 할 대화주제!</Text>
                 </View>
               </TouchableOpacity>
             </View>
 
             <View style={{flex: 1, paddingLeft: 5, paddingRight: 10}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/yr_card_avoid.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_location3.png"}}/>
                 </View>
@@ -316,7 +349,9 @@ class HomeScreen extends Component {
 
           <View style={{width: '100%', height: 200, flexDirection: 'row', backgroundColor: "#ebebeb", marginBottom: 10}}>
             <View style={{flex: 1, paddingLeft: 10, paddingRight: 5}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_location4.png"}}/>
                 </View>
@@ -327,7 +362,9 @@ class HomeScreen extends Component {
             </View>
 
             <View style={{flex: 1, paddingLeft: 5, paddingRight: 10}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_location1.png"}}/>
                 </View>
@@ -341,7 +378,9 @@ class HomeScreen extends Component {
 
           <View style={{width: '100%', height: 200, flexDirection: 'row', backgroundColor: "#ebebeb", marginBottom: 10}}>
             <View style={{flex: 1, paddingLeft: 10, paddingRight: 5}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_location2.png"}}/>
                 </View>
@@ -352,7 +391,9 @@ class HomeScreen extends Component {
             </View>
 
             <View style={{flex: 1, paddingLeft: 5, paddingRight: 10}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_location6.png"}}/>
                 </View>
@@ -373,7 +414,9 @@ class HomeScreen extends Component {
         <View>
           <View style={{width: '100%', height: 200, flexDirection: 'row', backgroundColor: "#ebebeb", marginBottom: 10}}>
             <View style={{flex: 1, paddingLeft: 10, paddingRight: 5}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_after2.png"}}/>
                 </View>
@@ -384,7 +427,9 @@ class HomeScreen extends Component {
             </View>
 
             <View style={{flex: 1, paddingLeft: 5, paddingRight: 10}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_after4.png"}}/>
                 </View>
@@ -397,7 +442,9 @@ class HomeScreen extends Component {
 
           <View style={{width: '100%', height: 200, flexDirection: 'row', backgroundColor: "#ebebeb", marginBottom: 10}}>
             <View style={{flex: 1, paddingLeft: 10, paddingRight: 5}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_after6.png"}}/>
                 </View>
@@ -408,7 +455,9 @@ class HomeScreen extends Component {
             </View>
 
             <View style={{flex: 1, paddingLeft: 5, paddingRight: 10}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_after3.png"}}/>
                 </View>
@@ -422,7 +471,9 @@ class HomeScreen extends Component {
 
           <View style={{width: '100%', height: 200, flexDirection: 'row', backgroundColor: "#ebebeb", marginBottom: 10}}>
             <View style={{flex: 1, paddingLeft: 10, paddingRight: 5}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_after1.png"}}/>
                 </View>
@@ -433,7 +484,9 @@ class HomeScreen extends Component {
             </View>
 
             <View style={{flex: 1, paddingLeft: 5, paddingRight: 10}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_after5.png"}}/>
                 </View>
@@ -454,7 +507,9 @@ class HomeScreen extends Component {
         <View>
           <View style={{width: '100%', height: 200, flexDirection: 'row', backgroundColor: "#ebebeb", marginBottom: 10}}>
             <View style={{flex: 1, paddingLeft: 10, paddingRight: 5}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_job3.png"}}/>
                 </View>
@@ -465,7 +520,9 @@ class HomeScreen extends Component {
             </View>
 
             <View style={{flex: 1, paddingLeft: 5, paddingRight: 10}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_job4.png"}}/>
                 </View>
@@ -478,7 +535,9 @@ class HomeScreen extends Component {
 
           <View style={{width: '100%', height: 200, flexDirection: 'row', backgroundColor: "#ebebeb", marginBottom: 10}}>
             <View style={{flex: 1, paddingLeft: 10, paddingRight: 5}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_job6.png"}}/>
                 </View>
@@ -489,7 +548,9 @@ class HomeScreen extends Component {
             </View>
 
             <View style={{flex: 1, paddingLeft: 5, paddingRight: 10}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_job1.png"}}/>
                 </View>
@@ -503,7 +564,9 @@ class HomeScreen extends Component {
 
           <View style={{width: '100%', height: 200, flexDirection: 'row', backgroundColor: "#ebebeb", marginBottom: 10}}>
             <View style={{flex: 1, paddingLeft: 10, paddingRight: 5}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_job2.png"}}/>
                 </View>
@@ -514,7 +577,9 @@ class HomeScreen extends Component {
             </View>
 
             <View style={{flex: 1, paddingLeft: 5, paddingRight: 10}}>
-              <TouchableOpacity style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
+              <TouchableOpacity
+                onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
+                 style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
                   <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_job5.png"}}/>
                 </View>
@@ -590,13 +655,13 @@ class HomeScreen extends Component {
             showsHorizontalScrollIndicator={false}
           >
             <View style={{flex:1, minWidth: 30, justifyContent: 'center', alignItems: 'center', paddingLeft: 10, paddingRight: 10, paddingVertical: 10}}>
-              {this.state.selctedPage == 1 ? (
+              {this.state.selctedPage == 3 ? (
                 <TouchableOpacity style={{width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', borderBottomWidth:5, borderColor: "#fc5a5a"}}>
-                  <Text>#대화주제</Text>
+                  <Text>#연애</Text>
                 </TouchableOpacity>
               ) : (
-                <TouchableOpacity onPress={()=>{this.setState({selctedPage: 1})}} style={{width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center',}}>
-                  <Text>#대화주제</Text>
+                <TouchableOpacity onPress={()=>{this.setState({selctedPage: 3})}} style={{width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center',}}>
+                  <Text>#연애</Text>
                 </TouchableOpacity>
               )}
             </View>
@@ -612,13 +677,13 @@ class HomeScreen extends Component {
               )}
             </View>
             <View style={{flex:1, minWidth: 30, justifyContent: 'center', alignItems: 'center', paddingLeft: 10, paddingRight: 10, paddingVertical: 10}}>
-              {this.state.selctedPage == 3? (
+              {this.state.selctedPage == 1? (
                 <TouchableOpacity style={{width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', borderBottomWidth:5, borderColor: "#fc5a5a"}}>
-                  <Text>#연애</Text>
+                  <Text>#대화주제</Text>
                 </TouchableOpacity>
               ) : (
-                <TouchableOpacity onPress={()=>{this.setState({selctedPage: 3})}} style={{width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center',}}>
-                  <Text>#연애</Text>
+                <TouchableOpacity onPress={()=>{this.setState({selctedPage: 1})}} style={{width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center',}}>
+                  <Text>#대화주제</Text>
                 </TouchableOpacity>
               )}
             </View>
@@ -647,9 +712,9 @@ class HomeScreen extends Component {
 
           </ScrollView>
           {/* 여기서부터 기사 렌더링 */}
+          {this.renderPage3()}
           {this.renderPage1()}
           {this.renderPage2()}
-          {this.renderPage3()}
           {this.renderPage4()}
           {this.renderPage5()}
           {/* 아티클 2개씩 */}

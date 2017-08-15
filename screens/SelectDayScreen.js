@@ -21,7 +21,7 @@ class SelectDayScreen extends Component {
   static navigationOptions = ({navigation}) => {
     return {
       title: '요일 선택',
-      header: <View style={{width: '100%', height:24, backgroundColor: '#ffffff'}}></View>,
+      header: Platform.OS == 'android' ? (<View style={{width: '100%', height:0, backgroundColor: '#ffffff'}}></View>) : (<View style={{width: '100%', height:24, backgroundColor: '#ffffff'}}></View>),
       tabBarLabel: 'Lunchting',
       headerRight: (
        <TouchableOpacity style={{padding: 20}} onPress={()=>{navigation.navigate('selloca')}}>

@@ -52,7 +52,7 @@ export const getLunchtingToken = (navigate) => {
   // async 로 인해 이 함수 내에 있는 비동기작업은 동기처럼 생각할 수 있다.
   return async (dispatch) => {
     // 디바이스 내에 토큰이 있는지(이미 로그인한 적이 있는 지) 확인하고 토큰을 로드
-    let user_token = await AsyncStorage.getItem('user_token');
+    let user_token = await AsyncStorage.removeItem('user_token');
     // await 로 인해 비동기를 동기처럼 작성가능.
     if (user_token) {
       // 토큰이 존재하므로 로그인이 성공적으로 이루어졌음을 의미. 토큰과 함께 액션 디스패치
@@ -69,7 +69,7 @@ export const getLunchtingToken = (navigate) => {
         // 토큰을 담아서 레일즈 서버에 요청
         body: JSON.stringify({ token: user_token })
       };
-      let res = await fetch('https://lunchlunch-whehdrms.c9users.io/app/meetings', reqOptions);
+      let res = await fetch('http://www.lunchting.com/app/meetings', reqOptions);
       let resJSON = await res.json();
       console.log('debuggggggggggggg')
       console.log(resJSON);
@@ -183,7 +183,7 @@ export const doingLogin = (nickname, password, navigate, push_token) => {
       body: JSON.stringify({ nickname, password, push_token })
     };
 
-    let res = await fetch('https://lunchlunch-whehdrms.c9users.io/app/login', requestOptions);
+    let res = await fetch('http://www.lunchting.com/app/login', requestOptions);
     let resJSON = await res.json();
 
     if (resJSON.status === "OK") {
@@ -204,7 +204,7 @@ export const doingLogin = (nickname, password, navigate, push_token) => {
         // 토큰을 담아서 레일즈 서버에 요청
         body: JSON.stringify({ token: resJSON.token })
       };
-      let response = await fetch('https://lunchlunch-whehdrms.c9users.io/app/meetings', reqOptions);
+      let response = await fetch('http://www.lunchting.com/app/meetings', reqOptions);
       let responseJSON = await response.json();
       let result2 = responseJSON.pop();
 
@@ -346,7 +346,7 @@ export const refreshChat = (token) => {
       body: JSON.stringify({ token: token })
     };
 
-    let res = await fetch('https://lunchlunch-whehdrms.c9users.io/app/meetings', reqOptions);
+    let res = await fetch('http://www.lunchting.com/app/meetings', reqOptions);
     let resJSON = await res.json();
 
     console.log(resJSON);
@@ -431,7 +431,7 @@ export const getMypage2 = (token) => {
       body: JSON.stringify({ token: token })
     };
 
-    let res = await fetch('https://lunchlunch-whehdrms.c9users.io/app/mypage', reqOptions);
+    let res = await fetch('http://www.lunchting.com/app/mypage', reqOptions);
     let resJSON = await res.json();
 
     // console.log(resJSON);

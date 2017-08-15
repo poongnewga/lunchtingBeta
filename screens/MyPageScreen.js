@@ -13,7 +13,7 @@ class MyPageScreen extends Component {
     return {
       title: '마이페이지',
       tabBarLabel: '마이페이지',
-      header: <View style={{width: '100%', height:24, backgroundColor: '#ffffff'}}></View>,
+      header: Platform.OS == 'android' ? (<View style={{width: '100%', height:0, backgroundColor: '#ffffff'}}></View>) : (<View style={{width: '100%', height:24, backgroundColor: '#ffffff'}}></View>),
       headerLeft: (<View></View>),
       headerRight: (
        <TouchableOpacity style={{padding: 20}} onPress={()=>{navigation.navigate('settings')}}>
