@@ -213,7 +213,7 @@ export const getMypage = (token) => {
       body: JSON.stringify({ token: token })
     };
 
-    let res = await fetch('http://www.lunchting.com/app/mypage', reqOptions);
+    let res = await fetch('https://www.lunchting.com/app/mypage', reqOptions);
     let resJSON = await res.json();
 
     // console.log(resJSON);

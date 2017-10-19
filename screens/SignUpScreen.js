@@ -145,7 +145,7 @@ class SignUpScreen extends Component {
     formdata.append("nickname", this.props.sign_nickname);
 
     // 주소 변경 필요
-    fetch('http://www.lunchting.com/app/checkuniq', {
+    fetch('https://www.lunchting.com/app/checkuniq', {
       method: 'post',
       headers: {
         'Accept': 'application/json',

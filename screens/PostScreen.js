@@ -43,7 +43,7 @@ class PostScreen extends Component {
       formdata.append("token", this.props.user);
       formdata.append("id", this.props.navigation.state.params.id);
 
-      fetch('http://www.lunchting.com/app/get_post', {
+      fetch('https://www.lunchting.com/app/get_post', {
         method: 'post',
         headers: {
           'Accept': 'application/json',
@@ -95,7 +95,7 @@ class PostScreen extends Component {
       formdata.append("token", this.props.user);
       formdata.append("id", this.props.navigation.state.params.id);
 
-      fetch('http://www.lunchting.com/app/get_post', {
+      fetch('https://www.lunchting.com/app/get_post', {
         method: 'post',
         headers: {
           'Accept': 'application/json',
@@ -147,7 +147,7 @@ class PostScreen extends Component {
     formdata.append("token", this.props.user);
     formdata.append("id", this.state.post.id);
 
-    fetch('http://www.lunchting.com/app/like_toggle', {
+    fetch('https://www.lunchting.com/app/like_toggle', {
       method: 'post',
       headers: {
         'Accept': 'application/json',
@@ -192,7 +192,7 @@ class PostScreen extends Component {
     formdata.append("id", this.state.post.id);
     formdata.append("content", this.state.commentText);
 
-    fetch('http://www.lunchting.com/app/write_comment', {
+    fetch('https://www.lunchting.com/app/write_comment', {
       method: 'post',
       headers: {
         'Accept': 'application/json',
@@ -236,7 +236,7 @@ class PostScreen extends Component {
       formdata.append("id", this.state.post.id);
       formdata.append("comment_id", id);
 
-      fetch('http://www.lunchting.com/app/delete_comment', {
+      fetch('https://www.lunchting.com/app/delete_comment', {
         method: 'post',
         headers: {
           'Accept': 'application/json',
@@ -279,7 +279,7 @@ class PostScreen extends Component {
       formdata.append("token", this.props.user);
       formdata.append("id", id);
 
-      fetch('http://www.lunchting.com/app/delete_post', {
+      fetch('https://www.lunchting.com/app/delete_post', {
         method: 'post',
         headers: {
           'Accept': 'application/json',
@@ -424,7 +424,9 @@ class PostScreen extends Component {
                     )
 
                   ) : (
-                    <View></View>
+                    <TouchableOpacity style={{width: 35, height: 14, justifyContent: 'center', alignItems: 'flex-end', }}>
+                      <FontAwesome size={12} color={"#fc5a5a"} name="ban" />
+                    </TouchableOpacity>
                   )}
                 </View>
 

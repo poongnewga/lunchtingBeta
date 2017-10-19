@@ -91,7 +91,7 @@ class SelectFinishScreen extends Component {
       formdata.append("locationSaved", this.props.locationSaved);
       // JSON.stringify(lunchtime)
 
-      fetch('http://www.lunchting.com/app/enroll_group', {
+      fetch('https://www.lunchting.com/app/enroll_group', {
         method: 'post',
         headers: {
           'Accept': 'application/json',

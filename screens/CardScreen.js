@@ -56,7 +56,7 @@ class CardScreen extends Component {
 
 
     // 주소 변경 필요
-    fetch('http://www.lunchting.com/app/signup', {
+    fetch('https://www.lunchting.com/app/signup', {
       method: 'post',
       headers: {
         'Accept': 'application/json',

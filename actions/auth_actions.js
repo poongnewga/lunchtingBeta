@@ -69,7 +69,7 @@ export const getLunchtingToken = (navigate) => {
         // 토큰을 담아서 레일즈 서버에 요청
         body: JSON.stringify({ token: user_token })
       };
-      let res = await fetch('http://www.lunchting.com/app/meetings', reqOptions);
+      let res = await fetch('https://www.lunchting.com/app/meetings', reqOptions);
       let resJSON = await res.json();
       console.log('debuggggggggggggg')
       console.log(resJSON);
@@ -183,7 +183,7 @@ export const doingLogin = (nickname, password, navigate, push_token) => {
       body: JSON.stringify({ nickname, password, push_token })
     };
 
-    let res = await fetch('http://www.lunchting.com/app/login', requestOptions);
+    let res = await fetch('https://www.lunchting.com/app/login', requestOptions);
     let resJSON = await res.json();
 
     if (resJSON.status === "OK") {
@@ -204,7 +204,7 @@ export const doingLogin = (nickname, password, navigate, push_token) => {
         // 토큰을 담아서 레일즈 서버에 요청
         body: JSON.stringify({ token: resJSON.token })
       };
-      let response = await fetch('http://www.lunchting.com/app/meetings', reqOptions);
+      let response = await fetch('https://www.lunchting.com/app/meetings', reqOptions);
       let responseJSON = await response.json();
       let result2 = responseJSON.pop();
 
@@ -346,7 +346,7 @@ export const refreshChat = (token) => {
       body: JSON.stringify({ token: token })
     };
 
-    let res = await fetch('http://www.lunchting.com/app/meetings', reqOptions);
+    let res = await fetch('https://www.lunchting.com/app/meetings', reqOptions);
     let resJSON = await res.json();
 
     console.log(resJSON);
@@ -431,7 +431,7 @@ export const getMypage2 = (token) => {
       body: JSON.stringify({ token: token })
     };
 
-    let res = await fetch('http://www.lunchting.com/app/mypage', reqOptions);
+    let res = await fetch('https://www.lunchting.com/app/mypage', reqOptions);
     let resJSON = await res.json();
 
     // console.log(resJSON);

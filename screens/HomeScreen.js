@@ -69,7 +69,7 @@ class HomeScreen extends Component {
       //
       //
       //
-      // let res = await fetch('http://www.lunchting.com/app/meetings', requestOptions);
+      // let res = await fetch('https://www.lunchting.com/app/meetings', requestOptions);
       // let resJSON = await res.json();
       // let result = resJSON.pop();
       //
@@ -139,7 +139,7 @@ class HomeScreen extends Component {
                  onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_conversation4.png"}}/>
+                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_conversation4.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>공통 취미/관심사 찾기</Text>
@@ -152,7 +152,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_conversation1.png"}}/>
+                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_conversation1.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>꼬리를 무는 대화법</Text>
@@ -167,7 +167,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_conversation2.png"}}/>
+                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_conversation2.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>편하게 대화하는 법</Text>
@@ -180,7 +180,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_conversation3.png"}}/>
+                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_conversation3.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>뻔하지 않은 대화법</Text>
@@ -196,7 +196,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_conversation5.png"}}/>
+                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_conversation5.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>대화 끊길 때 이어가는 법</Text>
@@ -209,7 +209,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_conversation6.png"}}/>
+                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_conversation6.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>나만 아는 얘기는 안 돼요!</Text>
@@ -232,7 +232,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_success3.png"}}/>
+                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_success3.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>지나친 자기자랑은 안돼요!</Text>
@@ -245,7 +245,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_success5.png"}}/>
+                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_success5.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>핸드폰은 잠시 넣어주세요</Text>
@@ -260,7 +260,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_success2.png"}}/>
+                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_success2.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>한여름 겨터파크 주의보!</Text>
@@ -273,7 +273,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_success4.png"}}/>
+                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_success4.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>경청을 통한 호감 얻기</Text>
@@ -289,7 +289,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_success1.png"}}/>
+                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_success1.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>런치팅 성공 사례 1</Text>
@@ -302,7 +302,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_success6.png"}}/>
+                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_success6.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>런치팅 성공 사례 2</Text>
@@ -325,7 +325,7 @@ class HomeScreen extends Component {
                  onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/yr_card_avoid_talk.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_location5.png"}}/>
+                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_location5.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>피해야 할 대화주제!</Text>
@@ -338,7 +338,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/yr_card_avoid.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_location3.png"}}/>
+                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_location3.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>런치팅에서 피해야 할 음식</Text>
@@ -353,7 +353,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_location4.png"}}/>
+                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_location4.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>자리 선정 꿀팁!!</Text>
@@ -366,7 +366,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_location1.png"}}/>
+                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_location1.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>런치팅 추천 식당 - 선릉편</Text>
@@ -382,7 +382,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_location2.png"}}/>
+                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_location2.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>런치팅 추천 메뉴 Top 3</Text>
@@ -395,7 +395,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_location6.png"}}/>
+                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_location6.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>피해야 할 음식 Top 5!</Text>
@@ -418,7 +418,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_after2.png"}}/>
+                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_after2.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>고백 타이밍에 대한 모든 것</Text>
@@ -431,7 +431,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_after4.png"}}/>
+                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_after4.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>지나친 아재개그 금지!</Text>
@@ -446,7 +446,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_after6.png"}}/>
+                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_after6.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>뻔하지 않은 애프터 신청법</Text>
@@ -459,7 +459,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_after3.png"}}/>
+                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_after3.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>집착은 안돼요ㅠㅠ</Text>
@@ -475,7 +475,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_after1.png"}}/>
+                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_after1.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>애프터 신청 최고의 타이밍</Text>
@@ -488,7 +488,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                   style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_after5.png"}}/>
+                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_after5.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>카톡으로 애프터 신청하기</Text>
@@ -511,7 +511,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_job3.png"}}/>
+                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_job3.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>월요병 극복법</Text>
@@ -524,7 +524,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_job4.png"}}/>
+                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_job4.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>악덕 상사 대처하기</Text>
@@ -539,7 +539,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_job6.png"}}/>
+                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_job6.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>Hip한 휴가지 Top 5!</Text>
@@ -552,7 +552,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_job1.png"}}/>
+                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_job1.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>칼퇴근 하는 법</Text>
@@ -568,7 +568,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_job2.png"}}/>
+                  <Image style={{width: '100%', height: "100%", resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_job2.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>부장님 개그 퇴치법</Text>
@@ -581,7 +581,7 @@ class HomeScreen extends Component {
                 onPress={()=>{this.props.navigation.navigate('article', {uri: "http://lunchlunch-whehdrms.c9users.io/images/hj_card_still.png"});}}
                  style={{flex: 1, backgroundColor: 'white', borderBottomWidth: 2, borderColor: '#dddddd' }}>
                 <View style={{width:'100%', height: 150, justifyContent: 'flex-start'}}>
-                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "http://www.lunchting.com/img/ks_job5.png"}}/>
+                  <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={{uri : "https://www.lunchting.com/img/ks_job5.png"}}/>
                 </View>
                 <View style={{ height: 50, justifyContent: 'center', alignItems: 'center'}}>
                   <Text>재태크 꿀팁!</Text>
@@ -619,7 +619,7 @@ class HomeScreen extends Component {
         >
           <View style={{width: "100%", height: 230, justifyContent: 'center', alignItems: 'center'}}>
             <Video
-              source={{ uri: 'http://www.lunchting.com/videos/main.mp4' }}
+              source={{ uri: 'https://www.lunchting.com/videos/main.mp4' }}
               rate={1.0}
               volume={0.0}
               muted={true}
