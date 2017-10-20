@@ -29,7 +29,8 @@ class SignUpScreen extends Component {
     sign_agree_all : false,
     sign_agree_privacy: false,
     sign_agree_service: false,
-    sign_agree_location: false
+    sign_agree_location: false,
+    sign_agree_eula: false
   }
 
   checkAll = () => {
@@ -39,14 +40,16 @@ class SignUpScreen extends Component {
         sign_agree_all: true,
         sign_agree_privacy: true,
         sign_agree_service: true,
-        sign_agree_location: true
+        sign_agree_location: true,
+        sign_agree_eula: true
       });
     } else {
       this.setState({
         sign_agree_all: false,
         sign_agree_privacy: false,
         sign_agree_service: false,
-        sign_agree_location: false
+        sign_agree_location: false,
+        sign_agree_eula: false
       });
     }
   }
@@ -57,7 +60,7 @@ class SignUpScreen extends Component {
       return false;
     }
 
-    if (this.state.sign_agree_service == true && this.state.sign_agree_location == true && this.state.sign_agree_privacy == false) {
+    if (this.state.sign_agree_service == true && this.state.sign_agree_location == true && this.state.sign_agree_eula == true &&  this.state.sign_agree_privacy == false) {
       this.setState({sign_agree_error: ""});
       this.setState({sign_agree_privacy: true, sign_agree_all: true});
     } else {
@@ -69,7 +72,7 @@ class SignUpScreen extends Component {
       this.setState({sign_agree_service: false, sign_agree_all: false});
       return false;
     }
-    if (this.state.sign_agree_privacy == true && this.state.sign_agree_location == true && this.state.sign_agree_service == false) {
+    if (this.state.sign_agree_privacy == true && this.state.sign_agree_location == true && this.state.sign_agree_eula == true && this.state.sign_agree_service == false) {
       this.setState({sign_agree_error: ""});
       this.setState({sign_agree_service: true, sign_agree_all: true});
     } else {
@@ -81,11 +84,23 @@ class SignUpScreen extends Component {
       this.setState({sign_agree_location: false, sign_agree_all: false});
       return false;
     }
-    if (this.state.sign_agree_privacy == true && this.state.sign_agree_service == true && this.state.sign_agree_location == false) {
+    if (this.state.sign_agree_privacy == true && this.state.sign_agree_service == true && this.state.sign_agree_eula == true && this.state.sign_agree_location == false) {
       this.setState({sign_agree_error: ""});
       this.setState({sign_agree_location: true, sign_agree_all: true});
     } else {
       this.setState({sign_agree_location: !this.state.sign_agree_location});
+    }
+  }
+  toggleEula = () => {
+    if (this.state.sign_agree_all == true) {
+      this.setState({sign_agree_eula: false, sign_agree_all: false});
+      return false;
+    }
+    if (this.state.sign_agree_privacy == true && this.state.sign_agree_service == true && this.state.sign_agree_location == true && this.state.sign_agree_eula == false) {
+      this.setState({sign_agree_error: ""});
+      this.setState({sign_agree_eula: true, sign_agree_all: true});
+    } else {
+      this.setState({sign_agree_eula: !this.state.sign_agree_eula});
     }
   }
 
@@ -366,7 +381,7 @@ class SignUpScreen extends Component {
               <View style={{width: "100%", justifyContent: 'center', alignItems: 'center'}}>
                 <Text style={{fontSize: 14, color: '#fc5a5a'}}>{this.state.sign_agree_error}</Text>
               </View>
-              <View style={{width: DEVICE_WIDTH * 0.8, height: 40, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 5}}>
+              <View style={{width: DEVICE_WIDTH * 0.8, height: 40, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 3}}>
                 <CheckBox
                   containerStyle={{width:40, height: 40, justifyContent: 'center', marginLeft:0, marginRight:0, paddingLeft:0, borderWidth: 0, backgroundColor: 'white'}}
                   title=''
@@ -383,7 +398,7 @@ class SignUpScreen extends Component {
                 </TouchableOpacity>
               </View>
 
-              <View style={{width: DEVICE_WIDTH * 0.8, height: 40, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+              <View style={{width: DEVICE_WIDTH * 0.8, height: 30, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
                 <CheckBox
                   containerStyle={{width:40, height: 40, justifyContent: 'center', marginLeft:0, marginRight:0, paddingLeft:0, borderWidth: 0, backgroundColor: 'white'}}
                   title=''
@@ -395,7 +410,7 @@ class SignUpScreen extends Component {
                   checkedColor='#fc5a5a'
                   checked={this.state.sign_agree_privacy}
                 />
-                <View style={{justifyContent: 'center', height: 40, flex: 1, paddingBottom: 1}}>
+                <View style={{justifyContent: 'center', height: 30, flex: 1, paddingBottom: 1}}>
                   <Text>
                     <Text onPress={()=> {this.props.navigation.navigate('personaldata')}} style={{color: '#00A5B1', textDecorationLine: 'underline'}}>개인정보 취급 방침</Text>
                     <Text style={{color: '#4a4a4a'}}>에 동의합니다.</Text>
@@ -415,7 +430,7 @@ class SignUpScreen extends Component {
                   checkedColor='#fc5a5a'
                   checked={this.state.sign_agree_service}
                 />
-                <View style={{justifyContent: 'center', height: 40, flex: 1, paddingBottom: 1}}>
+                <View style={{justifyContent: 'center', height: 30, flex: 1, paddingBottom: 1}}>
                   <Text>
                     <Text onPress={()=> {this.props.navigation.navigate('agreement')}} style={{color: '#00A5B1', textDecorationLine: 'underline'}}>서비스 이용약관</Text>
                     <Text style={{color: '#4a4a4a'}}>에 동의합니다.</Text>
@@ -423,7 +438,7 @@ class SignUpScreen extends Component {
                 </View>
               </View>
 
-              <View style={{width: DEVICE_WIDTH * 0.8, height: 40, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10}}>
+              <View style={{width: DEVICE_WIDTH * 0.8, height: 30, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
                 <CheckBox
                   containerStyle={{width:40, height: 40, justifyContent: 'center', marginLeft:0, marginRight:0, paddingLeft:0, borderWidth: 0, backgroundColor: 'white'}}
                   title=''
@@ -435,9 +450,29 @@ class SignUpScreen extends Component {
                   checkedColor='#fc5a5a'
                   checked={this.state.sign_agree_location}
                 />
-                <View style={{justifyContent: 'center', height: 40, flex: 1, paddingBottom: 1}}>
+                <View style={{justifyContent: 'center', height: 30, flex: 1, paddingBottom: 1}}>
                   <Text>
                     <Text onPress={()=> {this.props.navigation.navigate('locationagreement')}} style={{color: '#00A5B1', textDecorationLine: 'underline'}}>위치정보 이용약관</Text>
+                    <Text style={{color: '#4a4a4a'}}>에 동의합니다.</Text>
+                  </Text>
+                </View>
+              </View>
+
+              <View style={{width: DEVICE_WIDTH * 0.8, height: 30, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10}}>
+                <CheckBox
+                  containerStyle={{width:40, height: 40, justifyContent: 'center', marginLeft:0, marginRight:0, paddingLeft:0, borderWidth: 0, backgroundColor: 'white'}}
+                  title=''
+                  onPress={this.toggleEula}
+                  iconType='material'
+                  checkedIcon='done'
+                  uncheckedIcon='crop-din'
+                  uncheckedColor='#828282'
+                  checkedColor='#fc5a5a'
+                  checked={this.state.sign_agree_eula}
+                />
+                <View style={{justifyContent: 'center', height: 30, flex: 1, paddingBottom: 1}}>
+                  <Text>
+                    <Text onPress={()=> {this.props.navigation.navigate('eulaagreement')}} style={{color: '#00A5B1', textDecorationLine: 'underline'}}>최종 유저 사용권 계약(EULA)</Text>
                     <Text style={{color: '#4a4a4a'}}>에 동의합니다.</Text>
                   </Text>
                 </View>
