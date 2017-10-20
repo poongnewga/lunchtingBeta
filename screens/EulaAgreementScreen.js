@@ -9,7 +9,7 @@ class EulaAgreementScreen extends Component {
   static navigationOptions = ({navigation}) => {
 
     return {
-      title: '최종 사용자 사용권 계약(EULA)',
+      title: '최종 유저 사용권 계약',
       headerRight: (
        <View></View>
       ),
@@ -23,7 +23,7 @@ class EulaAgreementScreen extends Component {
           <View style={{width: WIDTH, backgroundColor: '#fafafa', alignItems: 'center', paddingTop: 15, paddingBottom: 15, }}>
             <View style={{width: WIDTH * 0.9, backgroundColor: 'white', borderRadius: 10, borderWidth: 1, borderColor: '#d2d2d2',padding: 8}}>
             <Text style={{fontSize: 12}}>{`
-앱 스토어를 통해 제공되는 앱은 판매되는 것이 아니라 라이센스가 부여됩니다. 각 응용 프로그램에 대한 사용권은 본 사용권 응용 프로그램 최종 사용자 사용권 계약 ( "표준 EULA") 또는 귀하와 응용 프로그램 공급자 ( "사용자 지정 EULA") 간의 사용자 지정 최종 사용자 사용권 계약 제공됩니다.
+ 앱 스토어를 통해 제공되는 앱은 판매되는 것이 아니라 라이센스가 부여됩니다. 각 응용 프로그램에 대한 사용권은 본 사용권 응용 프로그램 최종 사용자 사용권 계약 ( "표준 EULA") 또는 귀하와 응용 프로그램 공급자 ( "사용자 지정 EULA") 간의 사용자 지정 최종 사용자 사용권 계약 제공됩니다.
 이 표준 EULA 또는 사용자 정의 EULA에 따른 모든 Apple 응용 프로그램에 대한 사용권은 Apple에 의해 부여되며이 표준 EULA 또는 사용자 정의 EULA에 따른 타사 응용 프로그램에 대한 사용권은 해당 타사 응용 프로그램의 응용 프로그램 공급자에 의해 부여됩니다.
 이 표준 EULA의 적용을받는 모든 응용 프로그램을 여기에서 "사용 허가 응용 프로그램"이라고합니다. 응용 프로그램 공급자 또는 Apple ( "사용 허가자")은 본 Standard EULA에 따라 귀하에게 명시 적으로 부여되지 않은 사용 허가 응용 프로그램에 대한 모든 권리를 보유합니다 .
 
