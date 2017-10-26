@@ -5,11 +5,12 @@ import { connectedAuthScreen, connectedSignUpScreen, connectedCardScreen, CardSe
 connectedHomeScreen, connectedChatScreen, MeetScreen, connectedCommunityScreen, connectedMyPageScreen,
 connectedSelectPeopleScreen, connectedSelectDayScreen, connectedSelectLocationScreen, connectedSelectTimeScreen, connectedSelectFinishScreen,
 AgreementScreen, AnnouncementScreen, PersonalDataScreen, FAQScreen, InquiryScreen, connectedPostScreen, connectedNewPostScreen, connectedArticleScreen,
-connectedChatRoomScreen, LocationAgreementScreen } from './screens';
+connectedChatRoomScreen, LocationAgreementScreen, EulaAgreementScreen } from './screens';
 import { Provider } from 'react-redux';
 import store from './store';
 import registerForPushNotifications from './services/push_notifications';
 import { Notifications } from 'expo';
+
 
 
 export default class App extends React.Component {
@@ -127,7 +128,6 @@ export default class App extends React.Component {
     };
 
     const MainNavigator = TabNavigator({
-
       auth: { screen: StackNavigator({
         login: { screen : connectedAuthScreen },
         signup: { screen : connectedSignUpScreen },
@@ -136,6 +136,7 @@ export default class App extends React.Component {
         agreement: { screen: AgreementScreen },
         personaldata: { screen: PersonalDataScreen },
         locationagreement: { screen: LocationAgreementScreen },
+        eulaagreement: { screen: EulaAgreementScreen }
       }, { ...stackConfig})},
       main: {
         screen: StackNavigator({

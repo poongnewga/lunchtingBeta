@@ -14,6 +14,7 @@ export * from './AgreementScreen';
 export * from './PersonalDataScreen';
 export * from './FAQScreen';
 export * from './InquiryScreen';
+export * from './EulaAgreementScreen';
 
 export * from './HomeScreen';
 export * from './ChatScreen';

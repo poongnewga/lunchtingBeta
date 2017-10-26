@@ -262,7 +262,7 @@ class SelectPeopleScreen extends Component {
     let formdata = new FormData();
     formdata.append("nickname", this.state.nickname1);
     // 주소 변경 필요
-    fetch('http://www.lunchting.com/app/checkcompanion', {
+    fetch('https://www.lunchting.com/app/checkcompanion', {
       method: 'post',
       headers: {
         'Accept': 'application/json',
@@ -307,7 +307,7 @@ class SelectPeopleScreen extends Component {
     let formdata = new FormData();
     formdata.append("nickname", this.state.nickname2);
     // 주소 변경 필요
-    fetch('http://www.lunchting.com/app/checkcompanion', {
+    fetch('https://www.lunchting.com/app/checkcompanion', {
       method: 'post',
       headers: {
         'Accept': 'application/json',
@@ -353,7 +353,7 @@ class SelectPeopleScreen extends Component {
     let formdata = new FormData();
     formdata.append("nickname", this.state.nickname3);
     // 주소 변경 필요
-    fetch('http://www.lunchting.com/app/checkcompanion', {
+    fetch('https://www.lunchting.com/app/checkcompanion', {
       method: 'post',
       headers: {
         'Accept': 'application/json',

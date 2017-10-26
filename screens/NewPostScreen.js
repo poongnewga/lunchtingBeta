@@ -40,7 +40,7 @@ class NewPostScreen extends Component {
     formdata.append("title", this.state.titleText);
     formdata.append("content", this.state.content);
 
-    fetch('http://www.lunchting.com/app/write_new_post', {
+    fetch('https://www.lunchting.com/app/write_new_post', {
       method: 'post',
       headers: {
         'Accept': 'application/json',

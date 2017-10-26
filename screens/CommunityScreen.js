@@ -221,7 +221,7 @@ class CommunityScreen extends Component {
       formdata.append("token", this.props.user);
       formdata.append("query", this.state.searchText);
       formdata.append("page", this.state.searchPage);
-      fetch('http://www.lunchting.com/app/get_search_page', {
+      fetch('https://www.lunchting.com/app/get_search_page', {
         method: 'post',
         headers: {
           'Accept': 'application/json',
@@ -266,7 +266,7 @@ class CommunityScreen extends Component {
     formdata.append("query", this.state.searchText);
 
     // 주소 변경 필요
-    fetch('http://www.lunchting.com/app/refresh_search_posts', {
+    fetch('https://www.lunchting.com/app/refresh_search_posts', {
       method: 'post',
       headers: {
         'Accept': 'application/json',
@@ -307,7 +307,7 @@ class CommunityScreen extends Component {
       let formdata = new FormData();
       formdata.append("token", this.props.user);
       formdata.append("page", this.state.page);
-      fetch('http://www.lunchting.com/app/get_page', {
+      fetch('https://www.lunchting.com/app/get_page', {
         method: 'post',
         headers: {
           'Accept': 'application/json',
@@ -352,7 +352,7 @@ class CommunityScreen extends Component {
     formdata.append("token", this.props.user);
 
     // 주소 변경 필요
-    fetch('http://www.lunchting.com/app/refresh_posts', {
+    fetch('https://www.lunchting.com/app/refresh_posts', {
       method: 'post',
       headers: {
         'Accept': 'application/json',
