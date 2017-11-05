@@ -1,4 +1,7 @@
 # Lunchting - 직장인을 위한 미팅 서비스(Beta)
+
+* [ 런치팅 웹사이트 : https://www.lunchting.com ](https://www.lunchting.com)
+
 by using React Native with Expo
 
 ![lunchting](./lunchting_mobile.png)
